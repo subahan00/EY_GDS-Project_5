@@ -25,7 +25,7 @@ const HomePage = () => {
 
   return (
     <div>
-      <h1>News Application</h1>
+      <h1>News here</h1>
       <div className="news-container">
         {articles.map((article, index) => (
           <NewsCard

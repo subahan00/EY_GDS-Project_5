@@ -2,7 +2,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: #359cd3;
   }
   
   h1 {
@@ -18,7 +18,7 @@ body {
   }
   
   .news-card {
-    background: #fff;
+    background: #209cd1;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     margin: 10px;
