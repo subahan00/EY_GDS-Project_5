@@ -1,17 +1,14 @@
 import React from 'react';
-import '../styles.css';
 
-const NewsCard = ({ title, description, url }) => {
+const NewsCard = ({ title, description, url, image }) => {
   return (
     <div className="news-card">
+      <img src={image} alt={title} />
       <h3>{title}</h3>
       <p>{description}</p>
-      <a href={url} target="_blank" rel="noopener noreferrer">
-        Read More
-      </a>
+      <a href={url} target="_blank" rel="noopener noreferrer">Read more</a>
     </div>
   );
 };
 
 export default NewsCard;
-
