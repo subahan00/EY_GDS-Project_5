@@ -1,0 +1,352 @@
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #b0c1ca;
+  font-size: 16px;
+}
+
+/* Headings */
+h1 {
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* --- News Card Styles --- */
+.news-container {
+  padding: 20px;
+}
+.news-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+.news-card {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  transition: transform 0.3s ease;
+}
+
+.news-card:hover {
+  transform: translateY(-5px);
+}
+
+
+.news-card h3 {
+  margin: 0;
+  font-size: 1.2em;
+}
+
+.news-card p {
+  margin: 10px 0;
+  font-size: 1em;
+}
+
+.news-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  object-fit: cover; 
+}
+
+
+.news-card a {
+  text-decoration: none;
+  color: #1d82e8;
+  font-weight: bold;
+}
+
+/* --- Navigation Bar Styles --- */
+.nav-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: white;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logo-container {
+  margin-left: 20px;
+}
+
+.nav-logo {
+  height: 65px;
+  width: auto;
+  display: block;
+  margin-left: 20px; 
+}
+
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #155d90;
+  font-size: 1.1em;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+/* --- Search Bar and Button in Navigation Bar --- */
+.search-bar-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  padding: 5px 0;
+}
+
+.nav-search-input {
+  padding: 8px;
+  width: 50%;
+  max-width: 500px;
+  border: 2px solid #b0c1ca;
+  border-radius: 8px;
+  font-size: 1rem;
+  outline: none;
+  background-color:   #b5c3cd;
+}
+
+.nav-search-button {
+  padding: 8px 15px;
+  margin-left: 5px;
+  background-color: #155d90;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.nav-search-button:hover {
+  background-color: #0e466e;
+  color: #fff;
+}
+
+/* --- Dropdown --- */
+.category-dropdown {
+  display: inline-block;
+  position: relative;
+}
+
+.dropdown-btn {
+  background: none;
+  color: #155d90;
+  border: none;
+  font-size: 1.1em;
+  cursor: pointer;
+  padding: 5px 10px;
+}
+
+.dropdown-btn:hover {
+  text-decoration: underline;
+  background-color: #e2ebf0;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #fafcfd;
+  border: 1px solid #e7e5e5;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  min-width: 150px;
+}
+
+.dropdown-menu button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background: none;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  color: black;
+}
+
+.dropdown-menu button:hover {
+  background-color: #f4f2f2;
+}
+
+.category-dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+/* --- Search Bar Below Navigation Bar --- */
+.search-bar {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+  padding: 0;
+}
+
+.search-bar input {
+  padding: 10px;
+  width: 30%;
+  border: 2px solid #155d90;
+  border-radius: 15px;
+}
+
+.search-bar button {
+  padding: 10px 15px;
+  margin-left: 10px;
+  background-color: #155d90;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.search-bar button:hover {
+  background-color: #0e466e;
+}
+
+/* --- Spinner Styles --- */
+.spinner {
+  margin: 20px auto;
+  border: 6px solid #f3f3f3;
+  border-top: 6px solid #155d90;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* --- Pagination Styles --- */
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.pagination button {
+  background-color: #155d90;
+  border: none;
+  color: white;
+  padding: 10px 15px;
+  margin: 0 5px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.pagination button:hover {
+  background-color: #0e466e;
+}
+
+/* --- Responsive Design --- */
+@media (max-width: 768px) {
+  .news-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .news-card {
+    width: 90%;
+  }
+
+  .search-bar input {
+    width: 80%;
+  }
+
+  .pagination button {
+    padding: 8px 12px;
+  }
+
+  .nav-search-input {
+    width: 70%;
+    font-size: 0.9rem;
+  }
+
+  .nav-search-button {
+    font-size: 0.9rem;
+    padding: 6px 12px;
+  }
+}
+.menu-icon {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+}
+.menu-icon img {
+  height: 25px;
+  width: 25px;
+  cursor: pointer;
+}
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 250px;
+  height: 100%;
+  background-color: #ffffff;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.3);
+  z-index: 200;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  animation: slide-in 0.3s ease-in-out;
+}
+.sidebar a {
+  text-decoration: none;
+  color: #155d90;
+  font-size: 1.2em;
+  margin: 10px 0;
+}
+.close-btn {
+  align-self: flex-end;
+  background: none;
+  border: none;
+  font-size: 1.5em;
+  color: #155d90;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+@keyframes slide-in {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+@media (max-width: 768px) {
+  .sidebar {
+    width: 200px;
+  }
+
+  .sidebar a {
+    font-size: 1em;
+  }
+}
